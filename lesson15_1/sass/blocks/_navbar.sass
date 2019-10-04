@@ -4,32 +4,44 @@
         display: flex
         justify-content: space-between
         align-items: center
-    &__info
+    &-info
         display: flex
         align-items: center
         text-align: right
-    &__address
-        display: flex
-        flex-direction: column
-        font-size: 13px
-    &__button
-        margin-left: 30px
-        +bold
-    &__phone
-        display: inline-block
-        color: $text-color
-        font-size: 20px
-        text-decoration: none
-        margin-top: 6px
-        +bold
+        &__button
+            border-radius: 10px
+            border: none
+            background-color: $main-color
+            font-size: 10px
+            padding: 18px 28px
+            font-size: 13px
+            font-weight: 700
+            +bold
+            &_left
+                margin-left: 30px
+    &-contacts
+        &__address
+            display: flex
+            flex-direction: column
+            font-size: 13px
+        &__phone
+            display: inline-block
+            color: $text-color
+            font-size: 20px
+            text-decoration: none
+            margin-top: 6px
+            +bold
 @media (max-width: 768px)
     .navbar
-        &__contacts
+        &-contacts
             display: none
-        &__button
-            +bold
-            font-size: 10px
-            padding: 14px 25px
-            border-radius: 5px
-        &__logo
+        &-info    
+            &__button
+                +bold
+                font-size: 10px
+                padding: 14px 25px
+                border-radius: 5px
+                margin-right: 18px
+                margin-bottom: 4px
+        &-logo
             width: 90px
